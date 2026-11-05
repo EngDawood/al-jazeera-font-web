@@ -1,12 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to Al Jazeera Font Demo...</title>
-    <meta http-equiv="refresh" content="0;url=examples/demo.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خط الجزيرة للويب — Al Jazeera Font Web</title>
+  <meta name="description" content="خط الجزيرة للويب — ثلاثة أوزان: خفيف وعادي وعريض. جرّب الأوزان مباشرة.">
+  <link rel="stylesheet" href="./index.css">
+  <style>
+    :root{
+      --bg:#0d0c0a; --surface:#171410; --surface-2:#1f1a15; --border:#2b251e;
+      --text:#f2ecdf; --text-2:#9a8f7d; --accent:#f28c13; --accent-dim:rgba(242,140,19,.12);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#faf7f1; --surface:#f0eade; --surface-2:#e7ddcb; --border:#ddd2bd; --text:#1c1913; --text-2:#6b6252; }
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Al Jazeera",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
+    nav{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;height:64px;padding:0 32px;border-bottom:1px solid var(--border);background:var(--bg);z-index:10}
+    .brand{font-weight:700;font-size:1.1rem;color:var(--text);text-decoration:none}
+    .brand span{color:var(--accent)}
+    nav a{color:var(--text-2);text-decoration:none;font-size:.9rem}
+    main{max-width:960px;margin:0 auto;padding:48px 24px 96px}
+    .hero{padding:48px 0 32px;border-bottom:1px solid var(--border)}
+    .hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:700;line-height:1.25}
+    .hero h1 span{color:var(--accent)}
+    .hero p{color:var(--text-2);font-size:1.15rem;margin-top:16px;max-width:42rem}
+    section{padding:40px 0;border-bottom:1px solid var(--border)}
+    h2{font-size:1.4rem;font-weight:700;margin-bottom:20px}
+    .weight-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:16px}
+    .weight-card .meta{display:flex;justify-content:space-between;color:var(--text-2);font-size:.85rem;margin-bottom:8px}
+    .weight-card .sample{font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.5}
+    .w300{font-weight:300}.w400{font-weight:400}.w700{font-weight:700}
+    textarea{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:12px;color:var(--text);font-family:inherit;font-size:1.4rem;padding:16px;min-height:110px}
+    input[type=range]{width:100%;accent-color:var(--accent)}
+    .preview{font-size:48px;line-height:1.5;padding:24px 0;word-break:break-word}
+    code,pre{font-family:ui-monospace,monospace;direction:ltr;text-align:left}
+    pre{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;overflow-x:auto;font-size:.85rem;line-height:1.6}
+    footer{padding:32px 24px;text-align:center;color:var(--text-2);font-size:.9rem}
+    footer a{color:var(--accent);text-decoration:none}
+  </style>
 </head>
 <body>
-    <p>If you are not redirected automatically, <a href="examples/demo.html">click here</a>.</p>
+  <nav>
+    <a class="brand" href="#">خط <span>الجزيرة</span> للويب</a>
+    <a href="https://www.npmjs.com/package/@dawod/al-jazeera-font-web">npm ↗</a>
+  </nav>
+  <main>
+    <div class="hero">
+      <h1>خط الجزيرة<br><span>خفيف. عادي. عريض.</span></h1>
+      <p>حزمة ويب لخط الجزيرة العربي — عائلة واحدة بثلاثة أوزان، بملف CSS واحد عبر npm أو CDN.</p>
+    </div>
+
+    <section>
+      <h2>الأوزان</h2>
+      <div class="weight-card"><div class="meta"><span>Light</span><span>300</span></div><p class="sample w300">الجزيرة — الخبر لحظة بلحظة، من قلب الحدث إلى العالم</p></div>
+      <div class="weight-card"><div class="meta"><span>Regular</span><span>400</span></div><p class="sample w400">الجزيرة — الخبر لحظة بلحظة، من قلب الحدث إلى العالم</p></div>
+      <div class="weight-card"><div class="meta"><span>Bold</span><span>700</span></div><p class="sample w700">الجزيرة — الخبر لحظة بلحظة، من قلب الحدث إلى العالم</p></div>
+      <p class="w400" style="color:var(--text-2)">أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ — ٠١٢٣٤٥٦٧٨٩ — ABCDEFG abcdefg 0123456789</p>
+    </section>
+
+    <section>
+      <h2>جرّبه بنفسك</h2>
+      <textarea id="txt">اكتب هنا لتجربة خط الجزيرة</textarea>
+      <label style="color:var(--text-2);font-size:.9rem">الحجم <span id="sizeVal">48px</span></label>
+      <input type="range" id="size" min="18" max="96" value="48">
+      <label style="color:var(--text-2);font-size:.9rem">الوزن</label>
+      <input type="range" id="weight" min="0" max="2" step="1" value="1">
+      <div class="preview w400" id="preview">اكتب هنا لتجربة خط الجزيرة</div>
+    </section>
+
+    <section>
+      <h2>التثبيت</h2>
+      <pre>&lt;link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@dawod/al-jazeera-font-web/index.css" /&gt;
+
+npm install @dawod/al-jazeera-font-web
+
+body { font-family: "Al Jazeera", sans-serif; }</pre>
+    </section>
+  </main>
+  <footer>
+    الخط © Tarek Atrissi Design — انظر <a href="./NOTICE.md">NOTICE</a> ·
+    الحزمة من <a href="https://github.com/engdawood">@engdawood</a>
+  </footer>
+  <script>
+    const txt=document.getElementById('txt'), preview=document.getElementById('preview'),
+          size=document.getElementById('size'), weight=document.getElementById('weight'),
+          sizeVal=document.getElementById('sizeVal'), weights=[300,400,700];
+    txt.addEventListener('input',()=>preview.textContent=txt.value||' ');
+    size.addEventListener('input',()=>{preview.style.fontSize=size.value+'px';sizeVal.textContent=size.value+'px';});
+    weight.addEventListener('input',()=>preview.style.fontWeight=weights[weight.value]);
+  </script>
 </body>
 </html>
