@@ -1,0 +1,46 @@
+{
+  "name": "@dawod/al-jazeera-font-web",
+  "version": "1.0.0",
+  "description": "Community web package for the Al Jazeera (الجزيرة) Arabic font — Light, Regular & Bold. Drop-in CSS, CDN-ready, npm-installable.",
+  "main": "index.css",
+  "style": "index.css",
+  "files": [
+    "index.css",
+    "al-jazeera.css",
+    "fonts/",
+    "NOTICE.md"
+  ],
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "node test/verify.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engdawood/al-jazeera-font-web.git"
+  },
+  "keywords": [
+    "al-jazeera",
+    "الجزيرة",
+    "font",
+    "arabic",
+    "arabic-font",
+    "webfont",
+    "css",
+    "rtl",
+    "typography",
+    "font-face",
+    "woff2"
+  ],
+  "author": "engdawood",
+  "license": "SEE LICENSE IN NOTICE.md",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/engdawood/al-jazeera-font-web/issues"
+  },
+  "homepage": "https://engdawood.github.io/al-jazeera-font-web/",
+  "dependencies": {}
+}
