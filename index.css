@@ -1,0 +1,59 @@
+/*! Al Jazeera Font Web v1.0.0 | github.com/engdawood/al-jazeera-font-web
+   Font: Copyright (c) Tarek Atrissi Design. All rights reserved. See NOTICE.md */
+
+/* ============================================================
+   Al Jazeera — one family, three weights
+   Light 300 · Regular 400 · Bold 700
+   Relative URLs: works from npm, unpkg, jsDelivr (npm + GitHub)
+   and self-hosted copies alike — no CDN host is hard-coded.
+   ============================================================ */
+
+@font-face {
+  font-family: "Al Jazeera";
+  src: url("./fonts/al-jazeera/woff2/al-jazeera-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF,
+    U+FE70-FEFF, U+0020-007F, U+00A0-00FF, U+0100-024F, U+0250-02AF;
+}
+
+@font-face {
+  font-family: "Al Jazeera";
+  src: url("./fonts/al-jazeera/woff2/al-jazeera-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF,
+    U+FE70-FEFF, U+0020-007F, U+00A0-00FF, U+0100-024F, U+0250-02AF;
+}
+
+@font-face {
+  font-family: "Al Jazeera";
+  src: url("./fonts/al-jazeera/woff2/al-jazeera-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF,
+    U+FE70-FEFF, U+0020-007F, U+00A0-00FF, U+0100-024F, U+0250-02AF;
+}
+
+/* ============================================================
+   Utility Classes
+   ============================================================ */
+
+.font-al-jazeera {
+  font-family: "Al Jazeera", sans-serif;
+}
+
+.font-weight-light {
+  font-weight: 300;
+}
+
+.font-weight-regular {
+  font-weight: 400;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}

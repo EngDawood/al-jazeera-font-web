@@ -1,0 +1,9 @@
+index.html
+examples/
+.github/
+skills/
+test/
+.DS_Store
+Thumbs.db
+*.log
+.git/
