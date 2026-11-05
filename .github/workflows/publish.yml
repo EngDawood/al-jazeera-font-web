@@ -18,10 +18,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
 
-      # Trusted publishing requires npm >= 11.5.1 (Node 20 ships npm 10)
       - run: npm install -g npm@latest
 
-      # No NODE_AUTH_TOKEN: authentication is the OIDC trusted publisher
-      # configured for this package on npmjs.com.
+      # Authenticates with the NPM_TOKEN repository secret
+      # (Settings → Secrets and variables → Actions).
       - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
